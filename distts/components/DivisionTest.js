@@ -1,86 +1,7 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
-/******/ 			return installedModules[moduleId].exports;
-/******/
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
-
-module.exports = React;
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /**
  * Created by lena on 2017-03-22.
  */
-
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -92,7 +13,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(0);
+var React = require("react");
 var DivisionTest = (function (_super) {
     __extends(DivisionTest, _super);
     function DivisionTest(props) {
@@ -191,7 +112,7 @@ var DivisionTest = (function (_super) {
                     React.createElement("span", { style: { margin: '1%' } }, this.operationSymbol),
                     React.createElement("span", { style: { margin: '1%' } }, this.operator1),
                     React.createElement("span", { style: { margin: '1%' } }, "="),
-                    React.createElement("input", { type: "number", name: "inputValue", ref: function (input) { return _this.textInput = input; }, onKeyPress: this._handleKeyPress.bind(this), style: { width: '100px' } })),
+                    React.createElement("input", { type: "number", name: "inputValue", ref: function (input) { return _this.textInput = input; }, onKeyPress: this._handleKeyPress.bind(this), size: 3, style: { height: '60px', width: '120px' } })),
                 React.createElement("div", { style: { fontSize: "150%" } },
                     React.createElement("span", { style: { marginRight: '1%', color: this.resultFontColour } }, this.assesmentText))),
             React.createElement("div", null,
@@ -329,29 +250,4 @@ var DivisionTest = (function (_super) {
     return DivisionTest;
 }(React.Component));
 exports.DivisionTest = DivisionTest;
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = ReactDOM;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/// <reference path="../node_modules/@types/react/index.d.ts"/>
-/// <reference path="../node_modules/@types/react-dom/index.d.ts"/>
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(0);
-var ReactDOM = __webpack_require__(2);
-var DivisionTest_1 = __webpack_require__(1);
-ReactDOM.render(React.createElement(DivisionTest_1.DivisionTest, { testTimeSec: 30 }), document.getElementById("divisiontest"));
-
-
-/***/ })
-/******/ ]);
-//# sourceMappingURL=bundle.js.map
+//# sourceMappingURL=DivisionTest.js.map

@@ -130,8 +130,7 @@ export class DivisionTest extends React.Component<DivisionProps, any>{
                     <input type="number" name="inputValue"
                            ref={(input)=> this.textInput = input}
                            onKeyPress={this._handleKeyPress.bind(this)}
-                           size={3}
-                           style={{ height: '60px', width: '120px'}}
+                           style={{ width: '100px'}}
 
                     />
 
